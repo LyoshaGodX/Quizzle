@@ -10,6 +10,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser, faCheck, faTimes, faMinus, faChartBar, faDownload, faHome} from "@fortawesome/free-solid-svg-icons";
 import AnalyticsTabs from "@/common/components/AnalyticsTabs";
 import {exportPracticeResultsToExcel} from "@/common/utils/ExcelExport";
+import {exportPracticeResultsToCsv} from "@/common/utils/CsvExport";
 import {QUESTION_TYPES, SLIDER_MARGIN_CONFIG} from "@/common/constants/QuestionTypes.js";
 import "./styles.sass";
 import toast from "react-hot-toast";
@@ -87,6 +88,16 @@ export const PracticeResults = () => {
             toast.success(`Analytics exportiert: ${filename}`);
         } catch (error) {
             console.error('Error exporting to Excel:', error);
+            toast.error('Fehler beim Exportieren der Daten');
+        }
+    };
+
+    const handleExportToCsv = () => {
+        try {
+            const filename = exportPracticeResultsToCsv(results, code);
+            toast.success(`Ergebnisse exportiert: ${filename}`);
+        } catch (error) {
+            console.error('Error exporting to CSV:', error);
             toast.error('Fehler beim Exportieren der Daten');
         }
     };
@@ -522,6 +533,12 @@ export const PracticeResults = () => {
                             type="compact green"
                         />
                     )}
+                    <Button
+                        text="Als CSV herunterladen"
+                        icon={faDownload}
+                        onClick={handleExportToCsv}
+                        type="compact green"
+                    />
                 </div>
             </motion.div>
 
