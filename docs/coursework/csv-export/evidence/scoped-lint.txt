@@ -1,0 +1,10 @@
+Scoped ESLint checks passed.
+{
+  "files": [
+    "src/common/utils/CsvExport.js",
+    "tests/CsvExport.test.js",
+    "src/pages/PracticeResults/PracticeResults.jsx"
+  ],
+  "errors": 0,
+  "warnings": 0
+}

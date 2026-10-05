@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-05T14:49:56.698Z",
+  "source": "Actual downloads from the local app UI; copied from Downloads unchanged.",
+  "checks": [
+    {
+      "scenario": "ordinary",
+      "filename": "practice-results_NORM_2026-10-05.csv",
+      "bytes": 211,
+      "rows": 3,
+      "sha256": "943c734342568e5874957c9fc89cb8249d35a341d29193ea3aa90dec7a6f8565",
+      "passed": true
+    },
+    {
+      "scenario": "empty",
+      "filename": "practice-results_EMPT_2026-10-05.csv",
+      "bytes": 56,
+      "rows": 0,
+      "sha256": "a2810f79077d6e2fab77f8ecb28a3d069da4a9e4098c30933e921f683d1d11a1",
+      "passed": true
+    },
+    {
+      "scenario": "cyrillic-and-special-characters",
+      "filename": "practice-results_SPEC_2026-10-05.csv",
+      "bytes": 361,
+      "rows": 5,
+      "sha256": "99661bd87f35888da8017bfc565d5ae040bbc29e338750fa9ef8ff2fb06376f8",
+      "passed": true
+    },
+    {
+      "scenario": "existing-excel-export",
+      "filename": "Übungsquiz_NORM_Analytics_20261005T144513.xlsx",
+      "sheets": [
+        "Übersicht",
+        "Schüler Analytics",
+        "Fragen Analytics",
+        "Zusammenfassung"
+      ],
+      "passed": true
+    }
+  ]
+}

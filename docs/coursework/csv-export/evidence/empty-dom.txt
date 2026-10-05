@@ -1,0 +1,45 @@
+- link "Zum Inhalt springen":
+  - /url: "#main-content"
+- status: "Ergebnisse exportiert: practice-results_EMPT_2026-10-05.csv"
+- main:
+  - img "logo"
+  - heading "Übungsquiz Ergebnisse" [level=1]
+  - text: "Code:"
+  - strong: EMPT
+  - generic: "0"
+  - generic: Versuche
+  - generic: "0.0"
+  - generic: Durchschnitt
+  - generic: "0"
+  - generic: Beste Punktzahl
+  - generic: 14 Tage
+  - generic: Verbleiben
+  - button "Analytics":
+    - generic: Analytics
+  - button "Details":
+    - generic: Details
+  - tablist "Analytics Tabs":
+    - tab "Übersicht" [selected]:
+      - generic: Übersicht
+    - tab "Schüler":
+      - generic: Schüler
+    - tab "Fragen":
+      - generic: Fragen
+  - tabpanel "Übersicht":
+    - generic: "0"
+    - generic: Teilnehmer
+    - generic: "3"
+    - generic: Fragen
+    - generic: 0%
+    - generic: Ø Genauigkeit
+    - heading "Schwierigkeitsverteilung" [level=3]
+    - generic "3 schwer"
+    - generic: Einfach · 0
+    - generic: Mittel · 0
+    - generic: Schwer · 3
+  - button "Zurück zur Startseite":
+    - text: Zurück zur Startseite
+  - button "Als Excel herunterladen":
+    - text: Als Excel herunterladen
+  - button "Als CSV herunterladen" [active]:
+    - text: Als CSV herunterladen

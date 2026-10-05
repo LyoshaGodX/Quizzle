@@ -1,0 +1,11 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "documentWidth": 390,
+  "csvButtonWidth": 241.75,
+  "excelButtonWidth": 250.671875,
+  "overflows": false,
+  "source": "DOM bounding rectangles after responsive test; see after-mobile.jpg"
+}
