@@ -1,0 +1,6 @@
+{
+  "firstRecordedAt": "2026-10-05T16:48:29+03:00",
+  "materialsReadyAt": "2026-10-05T15:14:35Z",
+  "scope": "Recorded wall-clock interval to materials readiness; includes AI assistance and waiting, excludes prior example study. Per-stage actual effort not measured.",
+  "elapsedMinutes": 86.1
+}

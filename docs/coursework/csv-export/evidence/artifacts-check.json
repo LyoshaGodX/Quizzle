@@ -1,0 +1,169 @@
+{
+  "checkedAt": "2026-10-05T15:15:30.131Z",
+  "localReferences": 40,
+  "embeddedReportImages": 9,
+  "passed": true,
+  "limitation": "Static local-reference validation only; not a rendered-browser test of index.html.",
+  "checked": [
+    {
+      "document": "README.md",
+      "target": "index.html"
+    },
+    {
+      "document": "README.md",
+      "target": "speech.md"
+    },
+    {
+      "document": "README.md",
+      "target": "samples/practice-results_SPEC_2026-10-05.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "screenshots/before-desktop.jpg"
+    },
+    {
+      "document": "README.md",
+      "target": "issue.md"
+    },
+    {
+      "document": "README.md",
+      "target": "issue.json"
+    },
+    {
+      "document": "README.md",
+      "target": "screenshots/issue-before.jpg"
+    },
+    {
+      "document": "README.md",
+      "target": "screenshots/after-desktop.jpg"
+    },
+    {
+      "document": "README.md",
+      "target": "plan.json"
+    },
+    {
+      "document": "README.md",
+      "target": "screenshots/projects-plan-before.jpg"
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/pull-request-created.json"
+    },
+    {
+      "document": "README.md",
+      "target": "screenshots/pull-request-open.jpg"
+    },
+    {
+      "document": "README.md",
+      "target": "screenshots/commits.jpg"
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/self-review.json"
+    },
+    {
+      "document": "README.md",
+      "target": "../../../webui/src/common/utils/CsvExport.js"
+    },
+    {
+      "document": "README.md",
+      "target": "../../../webui/src/pages/PracticeResults/PracticeResults.jsx"
+    },
+    {
+      "document": "README.md",
+      "target": "screenshots/after-desktop.jpg"
+    },
+    {
+      "document": "README.md",
+      "target": "screenshots/special-desktop.jpg"
+    },
+    {
+      "document": "README.md",
+      "target": "screenshots/empty-desktop.jpg"
+    },
+    {
+      "document": "README.md",
+      "target": "screenshots/after-mobile.jpg"
+    },
+    {
+      "document": "README.md",
+      "target": "fixtures/attempts.json"
+    },
+    {
+      "document": "README.md",
+      "target": "scripts/seed-demo.cjs"
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/browser-downloads.json"
+    },
+    {
+      "document": "README.md",
+      "target": "samples/practice-results_NORM_2026-10-05.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "samples/practice-results_EMPT_2026-10-05.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "samples/practice-results_SPEC_2026-10-05.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "samples/Übungsquiz_NORM_Analytics_20261005T144513.xlsx"
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/unit-tests.txt"
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/build.txt"
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/full-lint.txt"
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/scoped-lint.txt"
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/timing.json"
+    },
+    {
+      "document": "README.md",
+      "target": "index.html"
+    },
+    {
+      "document": "README.md",
+      "target": "speech.md"
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/artifacts-check.json"
+    },
+    {
+      "document": "speech.md",
+      "target": "index.html"
+    },
+    {
+      "document": "index.html",
+      "target": "screenshots/before-desktop.jpg"
+    },
+    {
+      "document": "index.html",
+      "target": "screenshots/after-desktop.jpg"
+    },
+    {
+      "document": "index.html",
+      "target": "samples/practice-results_SPEC_2026-10-05.csv"
+    },
+    {
+      "document": "index.html",
+      "target": "samples/practice-results_EMPT_2026-10-05.csv"
+    }
+  ]
+}
