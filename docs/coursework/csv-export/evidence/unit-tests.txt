@@ -1,0 +1,26 @@
+✔ ordinary results include every attempt, zero scores and rounded percentages (3.0762ms)
+✔ empty results produce only the header, with BOM and CRLF (0.3729ms)
+✔ Cyrillic, commas, quotes and embedded newlines round-trip with an independent parser (0.6271ms)
+✔ CRLF and lone CR inside names are quoted without losing characters (0.4179ms)
+✔ partial attempts use the full quiz question count and inputs are not mutated (0.4365ms)
+✔ zero total does not export NaN or Infinity (0.5225ms)
+✔ missing optional fields remain empty and missing score defaults to zero (0.5786ms)
+✔ formula-like name "=1+1" is exported as text (0.5569ms)
+✔ formula-like name "+SUM(A1)" is exported as text (0.4342ms)
+✔ formula-like name "-1+2" is exported as text (0.3774ms)
+✔ formula-like name "@SUM(A1)" is exported as text (0.2166ms)
+✔ formula-like name "  =1+1" is exported as text (0.2185ms)
+✔ formula-like name "\tvalue" is exported as text (0.209ms)
+✔ formula-like name "\rvalue" is exported as text (0.1206ms)
+✔ formula-like name "\nvalue" is exported as text (0.1695ms)
+✔ download has expected filename, MIME type, BOM bytes and cleans up after click (2.1476ms)
+✔ download cleans up even if clicking fails (0.7754ms)
+✔ download filename cannot contain path separators (0.489ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 235.3285

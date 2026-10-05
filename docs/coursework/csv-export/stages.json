@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "T1",
+    "Number": 2,
+    "Title": "T1 Анализ и исходное состояние",
+    "Url": "https://github.com/LyoshaGodX/Quizzle/issues/2",
+    "Estimate": 0.75,
+    "CreatedAt": "2026-10-05T14:07:28Z"
+  },
+  {
+    "Id": "T2",
+    "Number": 3,
+    "Title": "T2 Issue и планирование",
+    "Url": "https://github.com/LyoshaGodX/Quizzle/issues/3",
+    "Estimate": 0.5,
+    "CreatedAt": "2026-10-05T14:10:13Z"
+  },
+  {
+    "Id": "T3",
+    "Number": 4,
+    "Title": "T3 Формирование CSV и тесты",
+    "Url": "https://github.com/LyoshaGodX/Quizzle/issues/4",
+    "Estimate": 1.25,
+    "CreatedAt": "2026-10-05T14:10:15Z"
+  },
+  {
+    "Id": "T4",
+    "Number": 5,
+    "Title": "T4 Кнопка экспорта CSV",
+    "Url": "https://github.com/LyoshaGodX/Quizzle/issues/5",
+    "Estimate": 0.75,
+    "CreatedAt": "2026-10-05T14:10:16Z"
+  },
+  {
+    "Id": "T5",
+    "Number": 6,
+    "Title": "T5 Проверка выгрузок и сборка",
+    "Url": "https://github.com/LyoshaGodX/Quizzle/issues/6",
+    "Estimate": 1.25,
+    "CreatedAt": "2026-10-05T14:10:18Z"
+  },
+  {
+    "Id": "T6",
+    "Number": 7,
+    "Title": "T6 Коммиты и pull request",
+    "Url": "https://github.com/LyoshaGodX/Quizzle/issues/7",
+    "Estimate": 0.5,
+    "CreatedAt": "2026-10-05T14:10:19Z"
+  },
+  {
+    "Id": "T7",
+    "Number": 8,
+    "Title": "T7 Отчет и выступление",
+    "Url": "https://github.com/LyoshaGodX/Quizzle/issues/8",
+    "Estimate": 1,
+    "CreatedAt": "2026-10-05T14:10:21Z"
+  }
+]

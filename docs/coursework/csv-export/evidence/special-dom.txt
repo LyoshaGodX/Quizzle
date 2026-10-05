@@ -1,0 +1,67 @@
+- link "Zum Inhalt springen":
+  - /url: "#main-content"
+- status: "Ergebnisse exportiert: practice-results_SPEC_2026-10-05.csv"
+- main:
+  - img "logo"
+  - heading "Übungsquiz Ergebnisse" [level=1]
+  - text: "Code:"
+  - strong: SPEC
+  - generic: "5"
+  - generic: Versuche
+  - generic: "1.5"
+  - generic: Durchschnitt
+  - generic: "3"
+  - generic: Beste Punktzahl
+  - generic: 14 Tage
+  - generic: Verbleiben
+  - button "Analytics":
+    - generic: Analytics
+  - button "Details" [active]:
+    - generic: Details
+  - heading "Nach Schülern gruppiert" [level=3]
+  - generic: 🧙‍♂️
+  - text: Иван Петров
+  - generic: "Versuche:"
+  - generic: "1"
+  - generic: "Beste:"
+  - generic: 3/3
+  - generic: "Durchschnitt:"
+  - generic: "3.0"
+  - generic: 🧙‍♂️
+  - text: Смирнова, Анна
+  - generic: "Versuche:"
+  - generic: "1"
+  - generic: "Beste:"
+  - generic: 2/3
+  - generic: "Durchschnitt:"
+  - generic: "2.0"
+  - generic: 🧙‍♂️
+  - text: Олег "Тест"
+  - generic: "Versuche:"
+  - generic: "1"
+  - generic: "Beste:"
+  - generic: 1.5/3
+  - generic: "Durchschnitt:"
+  - generic: "1.5"
+  - generic: 🧙‍♂️
+  - text: Мария Стажёр
+  - generic: "Versuche:"
+  - generic: "1"
+  - generic: "Beste:"
+  - generic: 1/3
+  - generic: "Durchschnitt:"
+  - generic: "1.0"
+  - generic: 🧙‍♂️
+  - text: =1+1
+  - generic: "Versuche:"
+  - generic: "1"
+  - generic: "Beste:"
+  - generic: 0/3
+  - generic: "Durchschnitt:"
+  - generic: "0.0"
+  - button "Zurück zur Startseite":
+    - text: Zurück zur Startseite
+  - button "Als Excel herunterladen":
+    - text: Als Excel herunterladen
+  - button "Als CSV herunterladen":
+    - text: Als CSV herunterladen

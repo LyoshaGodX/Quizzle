@@ -1,0 +1,31 @@
+{
+  "provenance": "Synthetic coursework fixtures. No real learner data.",
+  "timestamp": "2026-10-05T13:00:00.000Z",
+  "datasets": [
+    {
+      "code": "NORM",
+      "scenario": "ordinary",
+      "attempts": [
+        {"name": "Ivan Petrov", "score": 2, "total": 3},
+        {"name": "Anna Smirnova", "score": 0, "total": 3},
+        {"name": "Ivan Petrov", "score": 3, "total": 3}
+      ]
+    },
+    {
+      "code": "EMPT",
+      "scenario": "empty",
+      "attempts": []
+    },
+    {
+      "code": "SPEC",
+      "scenario": "cyrillic-and-special-characters",
+      "attempts": [
+        {"name": "Иван Петров", "score": 3, "total": 3},
+        {"name": "Смирнова, Анна", "score": 2, "total": 3},
+        {"name": "Олег \"Тест\"", "score": 1.5, "total": 3},
+        {"name": "Мария\nСтажёр", "score": 1, "total": 3},
+        {"name": "=1+1", "score": 0, "total": 3}
+      ]
+    }
+  ]
+}

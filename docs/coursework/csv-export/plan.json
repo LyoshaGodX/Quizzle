@@ -1,0 +1,17 @@
+{
+  "title": "Quizzle: CSV export of practice results",
+  "strategy": "GitHub Flow",
+  "branch": "feature/practice-results-csv",
+  "estimateUnit": "hours",
+  "estimateBasis": "Initial estimate for an individual educational implementation; actual elapsed time will be recorded separately and includes AI assistance.",
+  "totalEstimate": 6,
+  "tasks": [
+    {"id": "T1", "title": "Анализ Quizzle и фиксация исходного состояния", "estimate": 0.75, "deliverable": "Схема данных, исходный коммит и скриншот до изменения", "dependsOn": []},
+    {"id": "T2", "title": "Issue, критерии приемки и план в GitHub Projects", "estimate": 0.5, "deliverable": "Issue и таблица этапов с оценками времени", "dependsOn": ["T1"]},
+    {"id": "T3", "title": "Формирование CSV и модульные проверки", "estimate": 1.25, "deliverable": "CSV-утилита, экранирование, BOM и тесты", "dependsOn": ["T2"]},
+    {"id": "T4", "title": "Кнопка экспорта и интеграция в интерфейс", "estimate": 0.75, "deliverable": "Рабочая загрузка CSV со страницы результатов", "dependsOn": ["T3"]},
+    {"id": "T5", "title": "Проверка выгрузок и сборка", "estimate": 1.25, "deliverable": "Обычная, пустая и специальная выгрузки; скриншоты после", "dependsOn": ["T4"]},
+    {"id": "T6", "title": "Коммиты, PR и проверка изменения", "estimate": 0.5, "deliverable": "История GitHub Flow, связанный PR и итог проверки", "dependsOn": ["T5"]},
+    {"id": "T7", "title": "Markdown-отчет и материалы выступления", "estimate": 1, "deliverable": "Отчет с изображениями, ссылками и примером CSV; план выступления", "dependsOn": ["T6"]}
+  ]
+}
