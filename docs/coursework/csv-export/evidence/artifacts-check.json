@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-05T15:15:30.131Z",
-  "localReferences": 40,
-  "embeddedReportImages": 9,
+  "checkedAt": "2026-10-05T15:30:26.843Z",
+  "localReferences": 43,
+  "embeddedReportImages": 11,
   "passed": true,
   "limitation": "Static local-reference validation only; not a rendered-browser test of index.html.",
   "checked": [
@@ -60,6 +60,18 @@
     {
       "document": "README.md",
       "target": "evidence/self-review.json"
+    },
+    {
+      "document": "README.md",
+      "target": "evidence/completion.json"
+    },
+    {
+      "document": "README.md",
+      "target": "screenshots/pull-request-merged.jpg"
+    },
+    {
+      "document": "README.md",
+      "target": "screenshots/projects-final.jpg"
     },
     {
       "document": "README.md",

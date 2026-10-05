@@ -1,0 +1,372 @@
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "LyoshaGodX":
+        - /url: /LyoshaGodX
+        - generic: LyoshaGodX
+      - link "Quizzle":
+        - /url: /LyoshaGodX/Quizzle
+        - text: Quizzle
+      - button "Switch repository (alt shift r)":
+  - button "Open quick search dialog, type / to search (forward slash)":
+  - button "Create new...":
+  - link "You have no unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "User avatar"
+  - heading "Repository navigation" [level=2]
+  - navigation "Repository":
+    - list:
+      - link "Code":
+        - /url: /LyoshaGodX/Quizzle
+        - generic: Code
+      - link "Issues (1)":
+        - /url: /LyoshaGodX/Quizzle/issues
+        - generic: Issues
+        - generic: "1"
+        - generic: (1)
+      - link "Pull requests":
+        - /url: /LyoshaGodX/Quizzle/pulls
+        - generic: Pull requests
+      - link "Agents":
+        - /url: /LyoshaGodX/Quizzle/agents?author=LyoshaGodX
+        - generic: Agents
+      - link "Actions":
+        - /url: /LyoshaGodX/Quizzle/actions
+        - generic: Actions
+      - link "Projects":
+        - /url: /LyoshaGodX/Quizzle/projects
+        - generic: Projects
+    - button "More items":
+      - text: More
+      - generic: items
+- main:
+  - 'heading "Add CSV export for practice results - #9" [level=1]':
+    - text: Add CSV export for practice results
+    - generic: "- #9"
+  - generic: "#9"
+  - button "Edit title":
+  - button "Code":
+    - generic: Code
+  - img "Pull request"
+  - text: Merged
+  - link "LyoshaGodX":
+    - /url: /LyoshaGodX
+  - text: merged 5 commits into
+  - link "main":
+    - /url: /LyoshaGodX/Quizzle/tree/main
+  - generic: from
+  - link "feature/practice-results-csv":
+    - /url: /LyoshaGodX/Quizzle/tree/feature/practice-results-csv
+  - button "Copy head branch name to clipboard":
+  - generic "Oct 5, 2026, 18:24 GMT+3": Oct 5, 20262 minutes ago
+  - navigation "Pull request navigation":
+    - link "Conversation (0)":
+      - /url: /LyoshaGodX/Quizzle/pull/9
+      - text: Conversation
+      - generic: "0"
+      - generic: (0)
+    - link "Commits (5)":
+      - /url: /LyoshaGodX/Quizzle/pull/9/commits
+      - text: Commits
+      - generic: "5"
+      - generic: (5)
+    - link "Checks (0)":
+      - /url: /LyoshaGodX/Quizzle/pull/9/checks
+      - text: Checks
+      - generic: "0"
+      - generic: (0)
+    - link "Files changed (46)":
+      - /url: /LyoshaGodX/Quizzle/pull/9/changes
+      - text: Files changed
+      - generic: "46"
+      - generic: (46)
+  - heading "Conversation" [level=2]
+  - heading "@LyoshaGodX LyoshaGodX commented Oct 5, 202634 minutes ago" [level=3]:
+    - img "@LyoshaGodX"
+    - strong:
+      - link "LyoshaGodX":
+        - /url: /LyoshaGodX
+    - text: commented
+    - link "Oct 5, 202634 minutes ago":
+      - /url: "#issue-5714180040"
+  - button "Show options":
+    - img "Show options"
+  - generic "You are the owner of the Quizzle repository.":
+    - generic: Owner
+  - heading "Summary" [level=2]
+  - paragraph:
+    - text: Closes
+    - link "#1":
+      - /url: https://github.com/LyoshaGodX/Quizzle/issues/1
+    - text: .
+  - list:
+    - text: Add
+    - code: Als CSV herunterladen
+    - text: beside the existing Excel export on practice results.
+    - listitem: Export one row per saved attempt, including repeated and incomplete attempts.
+    - listitem: Use UTF-8 BOM, comma separators, CRLF records and quoted/escaped special characters.
+    - listitem: Export a valid header-only file for empty results and prefix formula-like text with an apostrophe.
+    - listitem: Keep the existing authenticated results API and XLSX export unchanged.
+    - listitem: Allow the results action buttons to wrap on narrow screens.
+  - heading "Project And Workflow" [level=2]
+  - paragraph:
+    - link "GitHub Projects plan":
+      - /url: https://github.com/users/LyoshaGodX/projects/1
+    - text: ": seven stages, initial estimate 6 hours."
+  - paragraph:
+    - text: "GitHub Flow:"
+    - code: main
+    - text: "->"
+    - code: feature/practice-results-csv
+    - text: "-> this pull request ->"
+    - code: main
+    - text: in the personal coursework fork. No upstream changes or upstream pull request.
+  - paragraph:
+    - text: The feature issue and plan were created before implementation. Commit
+    - code: ada2981
+    - text: preserves the proposal, fixtures, plan and before screenshot.
+  - heading "Verification" [level=2]
+  - list:
+    - code: node --test webui/tests/CsvExport.test.js
+    - text: ": 18/18 passing."
+    - listitem: "Actual UI downloads: NORM (3 attempts), EMPT (header only), SPEC (5 attempts with Cyrillic, commas, quotes, newline and formula-like name)."
+    - code: node docs/coursework/csv-export/scripts/verify-downloads.cjs
+    - text: ": all CSV files and existing XLSX download readable by SheetJS; byte hashes recorded."
+    - listitem: Desktop 1440x900 and mobile 390x844 checked; no horizontal overflow at the mobile breakpoint.
+    - code: bun run build
+    - text: in
+    - code: webui
+    - text: ": passed with existing CSS, bundle-size and browser-data warnings."
+    - listitem: "Scoped ESLint syntax/rules check on the changed JS/JSX and tests: passed."
+    - text: Full
+    - code: bun run lint
+    - text: ":"
+    - strong:
+      - text: blocked by the repository's existing legacy
+      - code: .eslintrc.cjs
+      - text: with ESLint 10
+    - text: ", also observed before implementation. This PR does not migrate unrelated lint configuration."
+  - paragraph:
+    - text: Evidence, screenshots, synthetic fixtures and sample downloads are under
+    - code: docs/coursework/csv-export/
+    - text: . No real learner data or authentication tokens are included.
+  - heading "Review Notes" [level=2]
+  - paragraph: Local self-review verified escaping, zero/fractional scores, percentages, attempt preservation, download cleanup, error reporting and unchanged backend/Excel behavior. No independent human review or CI approval is claimed.
+  - paragraph: CSV spreadsheet interpretation depends on the importer. Formula-like text receives an explicit apostrophe; automated ETL should account for that prefix. UTF-8 and comma delimiter may need to be selected explicitly in localized spreadsheet import dialogs.
+  - generic "Add or remove reactions":
+  - link "LyoshaGodX":
+    - /url: /LyoshaGodX
+  - text: added 4 commits
+  - link "October 5, 2026 17:4046 minutes ago":
+    - /url: "#commits-pushed-ada2981"
+  - link "@LyoshaGodX":
+    - /url: /LyoshaGodX
+    - img "@LyoshaGodX"
+  - code:
+    - 'link "docs: record CSV export proposal and implementation plan"':
+      - /url: /LyoshaGodX/Quizzle/pull/9/commits/ada29816c6e9920c204e312163c2806f87aa12aa
+  - code:
+    - link "ada2981":
+      - /url: /LyoshaGodX/Quizzle/pull/9/commits/ada29816c6e9920c204e312163c2806f87aa12aa
+  - link "@LyoshaGodX":
+    - /url: /LyoshaGodX
+    - img "@LyoshaGodX"
+  - code:
+    - 'link "feat: generate safe UTF-8 practice results CSV with tests"':
+      - /url: /LyoshaGodX/Quizzle/pull/9/commits/42f53df6085e8d06a777347bfe7cd6bee68438c1
+  - code:
+    - link "42f53df":
+      - /url: /LyoshaGodX/Quizzle/pull/9/commits/42f53df6085e8d06a777347bfe7cd6bee68438c1
+  - link "@LyoshaGodX":
+    - /url: /LyoshaGodX
+    - img "@LyoshaGodX"
+  - code:
+    - 'link "feat: add CSV download to practice results"':
+      - /url: /LyoshaGodX/Quizzle/pull/9/commits/2494661b051258e7b12db52cc2e2ef79c3918f39
+  - code:
+    - link "2494661":
+      - /url: /LyoshaGodX/Quizzle/pull/9/commits/2494661b051258e7b12db52cc2e2ef79c3918f39
+  - link "@LyoshaGodX":
+    - /url: /LyoshaGodX
+    - img "@LyoshaGodX"
+  - code:
+    - 'link "test: preserve browser downloads and CSV verification evidence"':
+      - /url: /LyoshaGodX/Quizzle/pull/9/commits/e092daaaeae0120080d9f4f1afa795d74b671ec9
+  - code:
+    - link "e092daa":
+      - /url: /LyoshaGodX/Quizzle/pull/9/commits/e092daaaeae0120080d9f4f1afa795d74b671ec9
+  - link "LyoshaGodX":
+    - /url: /LyoshaGodX
+    - img "LyoshaGodX"
+  - strong:
+    - link "LyoshaGodX":
+      - /url: /LyoshaGodX
+  - text: commented
+  - link "Oct 5, 202617 minutes ago":
+    - /url: "#pullrequestreview-5416642924"
+  - link "View reviewed changes":
+    - /url: /LyoshaGodX/Quizzle/pull/9/files/e092daaaeae0120080d9f4f1afa795d74b671ec9
+    - generic: View reviewed changes
+  - heading "@LyoshaGodX LyoshaGodX left a comment" [level=3]:
+    - img "@LyoshaGodX"
+    - strong:
+      - link "LyoshaGodX":
+        - /url: /LyoshaGodX
+    - text: left a comment
+  - button "Show options":
+    - img "Show options"
+  - generic "You are the owner of the Quizzle repository.":
+    - generic: Owner
+  - generic "You are the author of this pull request.":
+    - generic: Author
+  - paragraph: Local self-review completed with Codex assistance. Verified attempt-preserving CSV generation, UTF-8 BOM/CRLF/quoting, zero and fractional scores, formula-like text prefixing, header-only export, cleanup on failure, unchanged authenticated backend and existing XLSX export. All 18 tests, three actual CSV downloads, XLSX parsing and production build passed. Scoped lint passed; full upstream lint remains blocked by the existing ESLint 10/legacy config mismatch. No independent human approval or CI run is claimed. The coursework report and defense materials are being added to this branch before the personal-fork merge.
+  - generic "Add or remove reactions":
+  - link "@LyoshaGodX":
+    - /url: /LyoshaGodX
+    - img "@LyoshaGodX"
+  - code:
+    - 'link "docs: add coursework report and defense materials"':
+      - /url: /LyoshaGodX/Quizzle/pull/9/commits/34c85084a1f8043d1afe0d1c6dfd5a48decdeec5
+  - code:
+    - link "34c8508":
+      - /url: /LyoshaGodX/Quizzle/pull/9/commits/34c85084a1f8043d1afe0d1c6dfd5a48decdeec5
+  - button "Create a new pull request to revert these changes": Revert
+  - link "@LyoshaGodX":
+    - /url: /LyoshaGodX
+    - img "@LyoshaGodX"
+  - link "LyoshaGodX":
+    - /url: /LyoshaGodX
+  - text: merged commit
+  - link "de59c13":
+    - /url: /LyoshaGodX/Quizzle/commit/de59c1302c2d8ef7aeb474e3d6f1d978264490f6
+    - code: de59c13
+  - text: into
+  - generic: main
+  - link "Oct 5, 20262 minutes ago":
+    - /url: https://github.com/LyoshaGodX/Quizzle/pull/9#event-32521960036
+  - heading "Merge info" [level=2]
+  - heading "Pull request successfully merged and closed" [level=3]
+  - paragraph:
+    - text: You're all set — the
+    - link "feature/practice-results-csv":
+      - /url: /LyoshaGodX/Quizzle/tree/feature/practice-results-csv
+    - text: branch can be safely deleted.
+  - button "Delete branch":
+    - generic: Delete branch
+  - form "Add a comment":
+    - heading "Add a comment" [level=4]
+    - generic: Comment
+    - tablist "Add a comment":
+      - tab "Write" [selected]
+      - tab "Preview"
+    - toolbar:
+      - button "Heading":
+      - button "Bold":
+      - button "Italic":
+      - button "Quote":
+      - button "Code":
+      - button "Link":
+      - separator
+      - button "Numbered list":
+      - button "Unordered list":
+      - button "Task list":
+      - separator
+      - button "Attach files":
+      - button "Mention":
+      - button "Menu":
+    - tabpanel "Write":
+      - textbox "Comment":
+        - /placeholder: " "
+      - paragraph: Add your comment here...
+      - link "Markdown is supported":
+        - /url: https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+        - generic: Markdown is supported
+      - button "Paste, drop, or click to add files":
+        - generic: Paste, drop, or click to add files
+    - button "Comment" [disabled]
+  - text: Remember, contributions to this repository should follow our
+  - link "GitHub Community Guidelines":
+    - /url: https://docs.github.com/articles/github-community-guidelines
+  - text: .
+  - strong: ProTip!
+  - text: Add
+  - link ".patch":
+    - /url: /LyoshaGodX/Quizzle/pull/9.patch
+  - text: or
+  - link ".diff":
+    - /url: /LyoshaGodX/Quizzle/pull/9.diff
+  - text: to the end of URLs for Git’s plaintext views.
+  - form "Select reviewers":
+    - button "Reviewers":
+      - text: Reviewers
+    - text: No reviews
+    - generic: Still in progress?
+    - button "Convert to draft"
+  - form "Select assignees":
+    - button "Assignees":
+      - text: Assignees
+    - text: No one—
+    - button "assign yourself"
+  - button "Labels":
+    - text: Labels
+  - generic: None yet
+  - form "Select projects":
+    - button "Projects":
+      - text: Projects
+    - text: None yet
+  - form "Select milestones":
+    - button "Milestone":
+      - text: Milestone
+    - text: No milestone
+  - form "Link issues":
+    - button "Development":
+      - text: Development
+    - paragraph: Successfully merging this pull request may close these issues.
+    - link "Open issue Add CSV export for practice quiz results":
+      - /url: https://github.com/LyoshaGodX/Quizzle/issues/1
+      - img "Open issue"
+      - text: Add CSV export for practice quiz results
+  - button "Notifications Customize":
+    - generic: Notifications
+    - generic: Customize
+  - button "Unsubscribe":
+    - generic: Unsubscribe
+  - paragraph: You’re receiving notifications because you modified the open/close state.
+  - heading "1 participant" [level=3]
+  - link "@LyoshaGodX":
+    - /url: /LyoshaGodX
+    - img "@LyoshaGodX"
+  - button "Lock conversation":
+    - strong: Lock conversation
+  - button "Archive pull request":
+    - strong: Archive pull request
+- contentinfo:
+  - heading "Footer" [level=2]
+  - link "GitHub Homepage":
+    - /url: https://github.com
+  - generic: © 2026 GitHub, Inc.
+  - navigation "Footer":
+    - heading "Footer navigation" [level=3]
+    - list "Footer navigation":
+      - link "Terms":
+        - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+      - link "Privacy":
+        - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+      - link "Security":
+        - /url: https://github.com/security
+      - link "Status":
+        - /url: https://www.githubstatus.com/
+      - link "Community":
+        - /url: https://github.community/
+      - link "Docs":
+        - /url: https://docs.github.com/
+      - link "Contact":
+        - /url: https://support.github.com?tags=dotcom-footer
+      - button "Manage cookies"
+      - button "Do not share my personal information"

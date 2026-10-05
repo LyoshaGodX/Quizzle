@@ -1,0 +1,403 @@
+- tooltip "You are the owner of the Quizzle repository."
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "LyoshaGodX":
+        - /url: /LyoshaGodX
+        - generic: LyoshaGodX
+      - link "Quizzle":
+        - /url: /LyoshaGodX/Quizzle
+        - text: Quizzle
+      - button "Switch repository (alt shift r)":
+  - button "Open quick search dialog, type / to search":
+    - text: Type
+    - generic: /
+    - text: to search
+  - link "Chat with Copilot":
+    - /url: /copilot
+  - button "Open Copilot…":
+  - button "Create new...":
+  - link "All issues":
+    - /url: /issues
+  - link "All pull requests":
+    - /url: /pulls
+  - link "All repositories":
+    - /url: /repos
+  - link "You have no unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "User avatar"
+  - heading "Repository navigation" [level=2]
+  - navigation "Repository":
+    - list:
+      - link "Code":
+        - /url: /LyoshaGodX/Quizzle
+        - generic: Code
+      - link "Issues":
+        - /url: /LyoshaGodX/Quizzle/issues
+        - generic: Issues
+      - link "Pull requests":
+        - /url: /LyoshaGodX/Quizzle/pulls
+        - generic: Pull requests
+      - link "Agents":
+        - /url: /LyoshaGodX/Quizzle/agents?author=LyoshaGodX
+        - generic: Agents
+      - link "Actions":
+        - /url: /LyoshaGodX/Quizzle/actions
+        - generic: Actions
+      - link "Projects":
+        - /url: /LyoshaGodX/Quizzle/projects
+        - generic: Projects
+      - link "Security and quality":
+        - /url: /LyoshaGodX/Quizzle/security
+        - generic: Security and quality
+      - link "Insights":
+        - /url: /LyoshaGodX/Quizzle/pulse
+        - generic: Insights
+      - link "Settings":
+        - /url: /LyoshaGodX/Quizzle/settings
+        - generic: Settings
+- main:
+  - region "Header":
+    - 'heading "Add CSV export for practice quiz results #1 Edit issue title" [level=1]':
+      - text: Add CSV export for practice quiz results
+      - generic: "#1"
+      - button "Edit issue title":
+    - link "New issue":
+      - /url: /LyoshaGodX/Quizzle/issues/new/choose
+      - generic: New issue
+    - button "Copy link":
+  - img "Issue"
+  - text: Closed
+  - 'link "Merged #9"':
+    - /url: https://github.com/LyoshaGodX/Quizzle/pull/9
+    - img "Merged"
+    - generic: "#9"
+  - heading "Description" [level=2]
+  - link "@LyoshaGodX's profile":
+    - /url: https://github.com/LyoshaGodX
+    - img "@LyoshaGodX"
+  - link "LyoshaGodX":
+    - /url: https://github.com/LyoshaGodX
+  - text: opened
+  - link "on Oct 5, 20261h ago":
+    - /url: https://github.com/LyoshaGodX/Quizzle/issues/1#issue-5713310081
+  - button "Last edited by LyoshaGodX":
+    - generic: Last edited by LyoshaGodX
+  - generic "You are the owner of the Quizzle repository.": Owner
+  - button "Issue body actions":
+  - heading "Add CSV export for practice quiz results" [level=1]
+  - heading "Problem" [level=2]
+  - paragraph: The practice results page already exports analytics to Excel, but it does not provide a simple CSV of individual attempts. A teacher or corporate trainer needs to combine quiz attempts with a course progress register without processing a multi-sheet workbook.
+  - heading "User Story" [level=2]
+  - paragraph: As a teacher or corporate trainer, I want to download practice quiz attempts as a CSV file so that I can compare learning results and import them into a spreadsheet or reporting tool.
+  - heading "Scenario" [level=2]
+  - list:
+    - text: An authenticated teacher opens
+    - code: /results/:code
+    - text: after learners submit practice quiz answers.
+    - text: The teacher selects
+    - strong: Als CSV herunterladen
+    - text: beside the existing Excel export.
+    - text: The browser downloads a
+    - code: .csv
+    - text: file containing all saved attempts for that practice code.
+    - listitem: The teacher imports the file with comma as the delimiter and UTF-8 encoding. Cyrillic names and names containing commas, quotes or newlines remain intact.
+  - heading "Proposed Format" [level=2]
+  - list:
+    - listitem: One row per saved attempt, including repeated and incomplete attempts.
+    - text: "Columns:"
+    - code: Practice code
+    - text: ","
+    - code: Name
+    - text: ","
+    - code: Score
+    - text: ","
+    - code: Total
+    - text: ","
+    - code: Percentage
+    - text: ","
+    - code: Timestamp
+    - text: .
+    - code: Total
+    - text: is the total number of quiz questions.
+    - code: Timestamp
+    - text: is the last answer timestamp supplied by the existing API, in ISO 8601 format.
+    - code: Percentage
+    - text: is
+    - code: Score / Total * 100
+    - text: ", rounded to two decimal places; it is zero when"
+    - code: Total
+    - text: is zero.
+    - listitem: UTF-8 with BOM, comma delimiter, CRLF record separators, doubled double quotes inside quoted fields.
+    - text: "File name:"
+    - code: practice-results_<CODE>_<YYYY-MM-DD>.csv
+    - text: .
+  - heading "Acceptance Criteria" [level=2]
+  - list:
+    - button "Move The loaded practice results page has an accessible CSV download button with the existing visual style and download icon.":
+    - checkbox "The loaded practice results page has an accessible CSV download button with the existing visual style and download icon. checklist item" [checked]
+    - generic: The loaded practice results page has an accessible CSV download button with the existing visual style and download icon.
+    - button "Open The loaded practice results page has an accessible CSV download button with the existing visual style and download icon. task options":
+    - button "Move A normal dataset exports the header and exactly one row per attempt, with correct scores and percentages, including zero scores and repeated attempts.":
+    - checkbox "A normal dataset exports the header and exactly one row per attempt, with correct scores and percentages, including zero scores and repeated attempts. checklist item" [checked]
+    - generic: A normal dataset exports the header and exactly one row per attempt, with correct scores and percentages, including zero scores and repeated attempts.
+    - button "Open A normal dataset exports the header and exactly one row per attempt, with correct scores and percentages, including zero scores and repeated attempts. task options":
+    - button "Move Cyrillic characters are preserved and the downloaded file begins with the UTF-8 BOM.":
+    - checkbox "Cyrillic characters are preserved and the downloaded file begins with the UTF-8 BOM. checklist item" [checked]
+    - generic: Cyrillic characters are preserved and the downloaded file begins with the UTF-8 BOM.
+    - button "Open Cyrillic characters are preserved and the downloaded file begins with the UTF-8 BOM. task options":
+    - button "Move Commas, double quotes, carriage returns and line feeds in names are escaped correctly and round-trip through an independent CSV parser.":
+    - checkbox "Commas, double quotes, carriage returns and line feeds in names are escaped correctly and round-trip through an independent CSV parser. checklist item" [checked]
+    - generic: Commas, double quotes, carriage returns and line feeds in names are escaped correctly and round-trip through an independent CSV parser.
+    - button "Open Commas, double quotes, carriage returns and line feeds in names are escaped correctly and round-trip through an independent CSV parser. task options":
+    - button "Move An empty dataset downloads a valid header-only CSV without an exception.":
+    - checkbox "An empty dataset downloads a valid header-only CSV without an exception. checklist item" [checked]
+    - generic: An empty dataset downloads a valid header-only CSV without an exception.
+    - button "Open An empty dataset downloads a valid header-only CSV without an exception. task options":
+    - 'button "Move The browser downloads a `.csv` file with `text/csv;charset=utf-8` content; temporary DOM elements and object URLs are released."':
+    - 'checkbox "The browser downloads a `.csv` file with `text/csv;charset=utf-8` content; temporary DOM elements and object URLs are released. checklist item" [checked]'
+    - text: The browser downloads a
+    - code: .csv
+    - text: file with
+    - code: text/csv;charset=utf-8
+    - text: content; temporary DOM elements and object URLs are released.
+    - 'button "Open The browser downloads a `.csv` file with `text/csv;charset=utf-8` content; temporary DOM elements and object URLs are released. task options"':
+    - button "Move Names that could be interpreted as spreadsheet formulas are exported as text.":
+    - checkbox "Names that could be interpreted as spreadsheet formulas are exported as text. checklist item" [checked]
+    - generic: Names that could be interpreted as spreadsheet formulas are exported as text.
+    - button "Open Names that could be interpreted as spreadsheet formulas are exported as text. task options":
+    - button "Move Existing Excel export and access to practice results continue to work.":
+    - checkbox "Existing Excel export and access to practice results continue to work. checklist item" [checked]
+    - generic: Existing Excel export and access to practice results continue to work.
+    - button "Open Existing Excel export and access to practice results continue to work. task options":
+    - button "Move Automated checks and actual browser downloads are recorded, including ordinary, empty and special-character datasets.":
+    - checkbox "Automated checks and actual browser downloads are recorded, including ordinary, empty and special-character datasets. checklist item" [checked]
+    - generic: Automated checks and actual browser downloads are recorded, including ordinary, empty and special-character datasets.
+    - button "Open Automated checks and actual browser downloads are recorded, including ordinary, empty and special-character datasets. task options":
+    - status
+  - heading "Implementation Scope" [level=2]
+  - paragraph:
+    - text: Use the already loaded authenticated results response. Add a small CSV utility and a download action to
+    - code: PracticeResults
+    - text: ". No new API endpoint or database change is needed. Keep German interface wording. Development branch:"
+    - code: feature/practice-results-csv
+    - text: ", using GitHub Flow."
+  - paragraph:
+    - text: This proposal is implemented in an educational fork of
+    - code: gnmyt/Quizzle
+    - text: . All report fixtures are synthetic.
+  - heading "Planning" [level=2]
+  - paragraph:
+    - text: "GitHub Projects:"
+    - 'link "Quizzle: CSV-экспорт результатов"':
+      - /url: https://github.com/users/LyoshaGodX/projects/1
+    - text: "Initial estimate: 6 hours across T1-T7 (issues"
+    - link "#2":
+      - /url: https://github.com/LyoshaGodX/Quizzle/issues/2
+    - text: "-"
+    - link "#8":
+      - /url: https://github.com/LyoshaGodX/Quizzle/issues/8
+    - text: ). Plan and before screenshots committed before implementation in
+    - link "ada2981":
+      - /url: https://github.com/LyoshaGodX/Quizzle/commit/ada29816c6e9920c204e312163c2806f87aa12aa
+    - text: .
+  - button "Create sub-issue":
+    - generic: Create sub-issue
+  - button "View more sub-issue options":
+  - toolbar "Reactions":
+    - button "React":
+  - heading "Activity" [level=2]
+  - region "Events":
+    - link "LyoshaGodX":
+      - /url: /LyoshaGodX
+      - generic: LyoshaGodX
+    - text: mentioned this
+    - link "on Oct 5, 202637m ago":
+      - /url: https://github.com/LyoshaGodX/Quizzle/issues/1#event-14272794671
+    - region "Issues mentioned":
+      - list:
+        - img "Completed"
+        - 'link "T1 Анализ и исходное состояние #2"':
+          - /url: /LyoshaGodX/Quizzle/issues/2
+          - text: T1 Анализ и исходное состояние
+          - generic: "#2"
+        - img "Completed"
+        - 'link "T2 Issue и планирование #3"':
+          - /url: /LyoshaGodX/Quizzle/issues/3
+          - text: T2 Issue и планирование
+          - generic: "#3"
+        - img "Completed"
+        - 'link "T3 Формирование CSV и тесты #4"':
+          - /url: /LyoshaGodX/Quizzle/issues/4
+          - text: T3 Формирование CSV и тесты
+          - generic: "#4"
+        - img "Completed"
+        - 'link "T4 Кнопка экспорта CSV #5"':
+          - /url: /LyoshaGodX/Quizzle/issues/5
+          - text: T4 Кнопка экспорта CSV
+          - generic: "#5"
+        - img "Completed"
+        - 'link "T5 Проверка выгрузок и сборка #6"':
+          - /url: /LyoshaGodX/Quizzle/issues/6
+          - text: T5 Проверка выгрузок и сборка
+          - generic: "#6"
+        - img "Completed"
+        - 'link "T6 Коммиты и pull request #7"':
+          - /url: /LyoshaGodX/Quizzle/issues/7
+          - text: T6 Коммиты и pull request
+          - generic: "#7"
+        - img "Completed"
+        - 'link "T7 Отчет и выступление #8"':
+          - /url: /LyoshaGodX/Quizzle/issues/8
+          - text: T7 Отчет и выступление
+          - generic: "#8"
+        - img "Merged"
+        - 'link "Add CSV export for practice results #9"':
+          - /url: /LyoshaGodX/Quizzle/pull/9
+          - text: Add CSV export for practice results
+          - generic: "#9"
+    - link "LyoshaGodX":
+      - /url: /LyoshaGodX
+      - generic: LyoshaGodX
+    - generic: self-assigned this
+    - link "on Oct 5, 202615m ago":
+      - /url: https://github.com/LyoshaGodX/Quizzle/issues/1#event-32521093682
+    - link "LyoshaGodX":
+      - /url: /LyoshaGodX
+      - generic: LyoshaGodX
+    - text: closed this as
+    - link "completed":
+      - /url: /LyoshaGodX/Quizzle/issues?q=is%3Aissue%20state%3Aclosed%20archived%3Afalse%20reason%3Acompleted
+    - text: in
+    - link "#9":
+      - /url: https://github.com/LyoshaGodX/Quizzle/pull/9
+    - link "on Oct 5, 20265m ago":
+      - /url: https://github.com/LyoshaGodX/Quizzle/issues/1#event-32521962019
+  - heading "Add a comment" [level=2]
+  - group "new Comment":
+    - generic: new Comment
+    - generic: "Markdown input: edit mode selected."
+    - navigation "View mode":
+      - tablist "View mode":
+        - tab "Write" [selected]
+        - tab "Preview"
+    - toolbar "Formatting tools":
+      - button "Heading":
+      - button "Bold (control b)":
+      - button "Italic (control i)":
+      - button "Quote (control shift right angle bracket)":
+      - button "Code (control e)":
+      - button "Link (control k)":
+      - button "Unordered list (control 8)":
+      - button "Numbered list (control shift ampersand)":
+      - button "Task list (control shift l)":
+      - button "Mention":
+      - button "Reference":
+      - button "Slash commands":
+    - button "Saved replies":
+    - textbox "Add a comment":
+      - /placeholder: Use Markdown to format your comment
+    - status
+    - button "Paste, drop, or click to add files":
+      - generic: Paste, drop, or click to add files
+    - button "Reopen issue":
+      - generic: Reopen issue
+    - button "More options":
+    - button "Comment" [disabled]:
+      - generic: Comment
+  - heading "Metadata" [level=2]
+  - heading "Assignees" [level=3]
+  - button "Edit Assignees":
+    - generic: Edit Assignees
+  - list:
+    - link "LyoshaGodX":
+      - /url: /LyoshaGodX
+      - img "@LyoshaGodX"
+      - generic: LyoshaGodX
+  - heading "Labels" [level=3]
+  - button "Edit Labels":
+    - generic: Edit Labels
+  - generic: No labels
+  - heading "Projects" [level=3]
+  - button "Edit Projects":
+    - generic: Edit Projects
+  - list:
+    - 'link "Quizzle: CSV-экспорт результатов"':
+      - /url: https://github.com/users/LyoshaGodX/projects/1
+      - 'generic "Quizzle: CSV-экспорт результатов"'
+    - generic: Status
+    - button "Status Done":
+      - generic: Done
+    - button "Show more project fields":
+  - heading "Milestone" [level=3]
+  - button "Edit Milestone":
+    - generic: Edit Milestone
+  - generic: No milestone
+  - heading "Relationships" [level=3]
+  - button "Edit Relationships":
+    - generic: Edit Relationships
+  - generic: None yet
+  - heading "Development" [level=3]
+  - button "Edit Development":
+    - generic: Edit Development
+  - list:
+    - link "Add CSV export for practice results":
+      - /url: https://github.com/LyoshaGodX/Quizzle/pull/9
+      - img "Merged"
+      - generic: Add CSV export for practice results
+      - generic: LyoshaGodX/Quizzle
+  - heading "Notifications" [level=3]
+  - button "Customize"
+  - button "Unsubscribe":
+    - generic: Unsubscribe
+  - paragraph: You're receiving notifications because you're subscribed to this thread.
+  - heading "Participants" [level=3]
+  - link "@LyoshaGodX":
+    - /url: /LyoshaGodX
+    - img "@LyoshaGodX"
+  - heading "Issue actions" [level=2]
+  - list:
+    - button "Open in GitHub Copilot app":
+      - generic: Open in GitHub Copilot app
+    - button "Transfer issue":
+      - generic: Transfer issue
+    - button "Clone issue":
+      - generic: Clone issue
+    - button "Lock conversation":
+      - generic: Lock conversation
+    - button "Pin issue":
+      - generic: Pin issue
+    - button "Delete issue":
+      - generic: Delete issue
+    - button "Give feedback":
+      - generic: Give feedback
+- contentinfo:
+  - heading "Footer" [level=2]
+  - link "GitHub Homepage":
+    - /url: https://github.com
+  - generic: © 2026 GitHub, Inc.
+  - navigation "Footer":
+    - heading "Footer navigation" [level=3]
+    - list "Footer navigation":
+      - link "Terms":
+        - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+      - link "Privacy":
+        - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+      - link "Security":
+        - /url: https://github.com/security
+      - link "Status":
+        - /url: https://www.githubstatus.com/
+      - link "Community":
+        - /url: https://github.community/
+      - link "Docs":
+        - /url: https://docs.github.com/
+      - link "Contact":
+        - /url: https://support.github.com?tags=dotcom-footer
+      - button "Manage cookies"
+      - button "Do not share my personal information"

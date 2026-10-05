@@ -1,0 +1,223 @@
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "LyoshaGodX":
+        - /url: /LyoshaGodX
+        - generic: LyoshaGodX
+      - link "Projects":
+        - /url: /users/LyoshaGodX/projects
+        - generic: Projects
+      - 'link "Quizzle: CSV-экспорт результатов"':
+        - /url: /users/LyoshaGodX/projects/1
+        - generic: "Quizzle: CSV-экспорт результатов"
+  - button "Open quick search dialog, type / to search":
+    - text: Type
+    - generic: /
+    - text: to search
+  - link "Chat with Copilot":
+    - /url: /copilot
+  - button "Open Copilot…":
+  - button "Create new...":
+  - link "All issues (g then i)":
+    - /url: /issues
+  - link "All pull requests (g then p)":
+    - /url: /pulls
+  - link "All repositories":
+    - /url: /repos
+  - link "You have no unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "User avatar"
+- main:
+  - navigation "Project":
+    - 'heading "Quizzle: CSV-экспорт результатов" [level=1]'
+    - button "Add status update":
+      - generic: Add status update
+    - link "Insights":
+      - /url: /users/LyoshaGodX/projects/1/insights
+      - generic: Insights
+    - link "Workflows (6 enabled)":
+      - /url: /users/LyoshaGodX/projects/1/workflows
+      - generic: Workflows
+      - generic: "6"
+      - generic: (6)
+    - button "Project details":
+    - button "View more options":
+  - navigation "Select view":
+    - tablist:
+      - tab "View 1" [selected]:
+        - generic: View 1
+      - tab "New view":
+        - generic: New view
+  - button "View options for View 1":
+  - tabpanel:
+    - region "View filters":
+      - form "Filter":
+        - generic: Filter
+        - img "Search"
+        - combobox "Filter"
+      - button "View":
+        - generic: View
+    - grid:
+      - row "Title Title column options Status Status column options План, ч План, ч column options Add field":
+        - cell
+        - columnheader "Title Title column options":
+          - generic: Title
+          - button "Title column options":
+          - separator
+        - columnheader "Status Status column options":
+          - generic: Status
+          - button "Status column options":
+          - separator
+        - columnheader "План, ч План, ч column options":
+          - generic: План, ч
+          - button "План, ч column options":
+          - separator
+        - columnheader "Add field":
+          - button "Add field":
+      - 'row "Row actions Add CSV export for practice quiz results, status: closed Done Dropdown button"':
+        - gridcell "Row actions":
+          - generic: "1"
+          - button "Row actions":
+        - 'rowheader "Add CSV export for practice quiz results, status: closed"':
+          - img "Closed as completed issue"
+          - link "Add CSV export for practice quiz results":
+            - /url: https://github.com/LyoshaGodX/Quizzle/issues/1
+          - generic: "#1"
+          - button "Add sub-issue":
+        - gridcell "Done Dropdown button":
+          - generic: Done
+          - button "Dropdown button":
+        - gridcell
+        - gridcell
+      - 'row "Row actions T1 Анализ и исходное состояние, status: closed Done Dropdown button 0.75"':
+        - gridcell "Row actions":
+          - generic: "2"
+          - button "Row actions":
+        - 'rowheader "T1 Анализ и исходное состояние, status: closed"':
+          - img "Closed as completed issue"
+          - link "T1 Анализ и исходное состояние":
+            - /url: https://github.com/LyoshaGodX/Quizzle/issues/2
+          - generic: "#2"
+          - button "Add sub-issue":
+        - gridcell "Done Dropdown button":
+          - generic: Done
+          - button "Dropdown button":
+        - gridcell "0.75":
+          - generic: "0.75"
+        - gridcell
+      - 'row "Row actions T2 Issue и планирование, status: closed Done Dropdown button 0.5"':
+        - gridcell "Row actions":
+          - generic: "3"
+          - button "Row actions":
+        - 'rowheader "T2 Issue и планирование, status: closed"':
+          - img "Closed as completed issue"
+          - link "T2 Issue и планирование":
+            - /url: https://github.com/LyoshaGodX/Quizzle/issues/3
+          - generic: "#3"
+          - button "Add sub-issue":
+        - gridcell "Done Dropdown button":
+          - generic: Done
+          - button "Dropdown button":
+        - gridcell "0.5":
+          - generic: "0.5"
+        - gridcell
+      - 'row "Row actions T3 Формирование CSV и тесты, status: closed Done Dropdown button 1.25"':
+        - gridcell "Row actions":
+          - generic: "4"
+          - button "Row actions":
+        - 'rowheader "T3 Формирование CSV и тесты, status: closed"':
+          - img "Closed as completed issue"
+          - link "T3 Формирование CSV и тесты":
+            - /url: https://github.com/LyoshaGodX/Quizzle/issues/4
+          - generic: "#4"
+          - button "Add sub-issue":
+        - gridcell "Done Dropdown button":
+          - generic: Done
+          - button "Dropdown button":
+        - gridcell "1.25":
+          - generic: "1.25"
+        - gridcell
+      - 'row "Row actions T4 Кнопка экспорта CSV, status: closed Done Dropdown button 0.75"':
+        - gridcell "Row actions":
+          - generic: "5"
+          - button "Row actions":
+        - 'rowheader "T4 Кнопка экспорта CSV, status: closed"':
+          - img "Closed as completed issue"
+          - link "T4 Кнопка экспорта CSV":
+            - /url: https://github.com/LyoshaGodX/Quizzle/issues/5
+          - generic: "#5"
+          - button "Add sub-issue":
+        - gridcell "Done Dropdown button":
+          - generic: Done
+          - button "Dropdown button":
+        - gridcell "0.75":
+          - generic: "0.75"
+        - gridcell
+      - 'row "Row actions T5 Проверка выгрузок и сборка, status: closed Done Dropdown button 1.25"':
+        - gridcell "Row actions":
+          - generic: "6"
+          - button "Row actions":
+        - 'rowheader "T5 Проверка выгрузок и сборка, status: closed"':
+          - img "Closed as completed issue"
+          - link "T5 Проверка выгрузок и сборка":
+            - /url: https://github.com/LyoshaGodX/Quizzle/issues/6
+          - generic: "#6"
+          - button "Add sub-issue":
+        - gridcell "Done Dropdown button":
+          - generic: Done
+          - button "Dropdown button":
+        - gridcell "1.25":
+          - generic: "1.25"
+        - gridcell
+      - 'row "Row actions T6 Коммиты и pull request, status: closed Done Dropdown button 0.5"':
+        - gridcell "Row actions":
+          - generic: "7"
+          - button "Row actions":
+        - 'rowheader "T6 Коммиты и pull request, status: closed"':
+          - img "Closed as completed issue"
+          - link "T6 Коммиты и pull request":
+            - /url: https://github.com/LyoshaGodX/Quizzle/issues/7
+          - generic: "#7"
+          - button "Add sub-issue":
+        - gridcell "Done Dropdown button":
+          - generic: Done
+          - button "Dropdown button":
+        - gridcell "0.5":
+          - generic: "0.5"
+        - gridcell
+      - 'row "Row actions T7 Отчет и выступление, status: closed Done Dropdown button 1"':
+        - gridcell "Row actions":
+          - generic: "8"
+          - button "Row actions":
+        - 'rowheader "T7 Отчет и выступление, status: closed"':
+          - img "Closed as completed issue"
+          - link "T7 Отчет и выступление":
+            - /url: https://github.com/LyoshaGodX/Quizzle/issues/8
+          - generic: "#8"
+          - button "Add sub-issue":
+        - gridcell "Done Dropdown button":
+          - generic: Done
+          - button "Dropdown button":
+        - gridcell "1":
+          - generic: "1"
+        - gridcell
+      - row "Create new item or add existing item":
+        - cell "Create new item or add existing item":
+          - button "Create new item or add existing item":
+        - cell:
+          - text: You can use
+          - generic: control
+          - generic: Control
+          - generic: +
+          - generic: space
+          - generic: Space
+          - text: to add an item
+          - combobox "Start typing to create an item, or type hashtag to select a repository"
+- status
+- status
